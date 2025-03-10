@@ -85,8 +85,7 @@ Our proposed system addresses these issues with:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/heart-disease-prediction.git
-   cd heart-disease-prediction
+   git clone (https://github.com/irum13/Heart-Disease-Prediction-Using-ML-/tree/main)
 
 2. Install dependencies:
    ```sh
