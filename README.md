@@ -103,3 +103,8 @@ You can view the full Jupyter Notebook on **Nbviewer** here:
 If you want to run this notebook online, open it in **Google Colab**:  
 🚀 [Run on Colab](https://colab.research.google.com/github/irum13/Heart-Disease-Prediction-Using-ML-/blob/main/ReplaceRows.ipynb)
 
+## 📸 Application Screenshots
+
+### 🏠 Home Page
+![Home Page](https://github.com/irum13/Heart-Disease-Prediction-Using-ML-/blob/c182b037c546fd4ce056afa147afd02fe8b588ff/Project%20Screenshot.png)
+
