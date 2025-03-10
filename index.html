@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Predictor</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input[type="number"],
+        button {
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #result p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Predictor</h1>
+        <form id="predictionForm" method="POST">
+            <label for="age">Age (29-77):</label>
+            <input type="number" id="age" name="age" min="29" max="77" required>
+            <label for="sex">Sex (0 for female, 1 for male):</label>
+            <input type="number" id="sex" name="sex" min="0" max="1" required>
+            <label for="cp">Chest Pain Type (0-3):</label>
+            <input type="number" id="cp" name="cp" min="0" max="3" required>
+            <label for="trestbps">Resting Blood Pressure (94-200):</label>
+            <input type="number" id="trestbps" name="trestbps" min="94" max="200" required>
+            <label for="chol">Cholesterol (126-564):</label>
+            <input type="number" id="chol" name="chol" min="126" max="564" required>
+            <label for="fbs">Fasting Blood Sugar > 120 mg/dl (1 = true; 0 = false):</label>
+            <input type="number" id="fbs" name="fbs" min="0" max="1" required>
+            <label for="restecg">Resting ECG Results (0-2):</label>
+            <input type="number" id="restecg" name="restecg" min="0" max="2" required>
+            <label for="thalach">Maximum Heart Rate Achieved (71-202):</label>
+            <input type="number" id="thalach" name="thalach" min="71" max="202" required>
+            <label for="exang">Exercise Induced Angina (1 = yes; 0 = no):</label>
+            <input type="number" id="exang" name="exang" min="0" max="1" required>
+            <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest (0-6.2):</label>
+            <input type="number" id="oldpeak" name="oldpeak" min="0" max="6.2" step="0.1" required>
+            <label for="slope">The Slope of the Peak Exercise ST Segment (0-2):</label>
+            <input type="number" id="slope" name="slope" min="0" max="2" required>
+            <label for="ca">Number of Major Vessels Colored by Fluoroscopy (0-3):</label>
+            <input type="number" id="ca" name="ca" min="0" max="3" required>
+            <label for="thal">Thal (1 = normal; 2 = fixed defect; 3 = reversible defect):</label>
+            <input type="number" id="thal" name="thal" min="1" max="3" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result">
+            {% if prediction_result %}
+                <p>Prediction: {{ prediction_result.prediction }}</p>
+                <p>Severity: {{ prediction_result.severity }}</p>
+            {% endif %}
+            {% if error_message %}
+                <p style="color: red;">Error: {{ error_message }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
