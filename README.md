@@ -98,8 +98,8 @@ Our proposed system addresses these issues with:
 ## 📖 Heart Disease Prediction Notebook
 
 You can view the full Jupyter Notebook on **Nbviewer** here:  
-🔗 [View Notebook](https://nbviewer.org/github/irum13/Phishing-Detection-System-Through-Hybrid-ML-Based-on-URL-/blob/main/org.ipynb)
+🔗 [View Notebook](https://nbviewer.org/github/irum13/Heart-Disease-Prediction-Using-ML-/blob/main/ReplaceRows.ipynb)
 
 If you want to run this notebook online, open it in **Google Colab**:  
-🚀 [Run on Colab](https://colab.research.google.com/github/irum13/Phishing-Detection-System-Through-Hybrid-ML-Based-on-URL-/blob/main/org.ipynb)
+🚀 [Run on Colab](https://colab.research.google.com/github/irum13/Heart-Disease-Prediction-Using-ML-/blob/main/ReplaceRows.ipynb)
 
